@@ -1,0 +1,22 @@
+selenium 설치 (크롤링 라이브러리로 selenium을 고른 이유는 beautiful soup이 더 빠르긴한데 크롤링하는 장면이 보이지를 않는다. 그래서 시각적 효과를 위해 selenium을 사용한다.)
+
+chromedriver 다운
+ㄴ> https://chromedriver.chromium.org/downloads 에서 버전에 맞게 다운로드. 크롬버전 체크는 크롬메뉴 -> 도움말 -> Chrome 정보
+
+pymysql 다운
+
+mysql 연동
+
+교보 크롤링 => DB에 저장
+
+
+
+
+
+
+
+
+
+
+
+
