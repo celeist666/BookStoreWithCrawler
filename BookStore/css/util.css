@@ -3803,7 +3803,7 @@ SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE
 
 .bo11 {
 	border: 1px solid #d9d9d9;
-	border-radius: 25px;
+	/* border-radius: 25px; */
 }
 
 .bo12 {
