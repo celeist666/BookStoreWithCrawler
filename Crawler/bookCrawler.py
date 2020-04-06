@@ -66,9 +66,12 @@ def domestic(browser, category_list):
 def foreign(browser, category_list):
     for cat in category_list:
         if cat // 10 < 1:
-            browser.get(addr + '0' + str(cat))
+            browser.get(addr + 'ENG' + addr1 + '0' + str(cat))
         else:
-            browser.get(addr + str(cat))
+            if cat<16:
+                browser.get(addr + 'ENG' + addr1 + str(cat))
+            else:
+                browser.get(addr + 'JAP' + addr1 + str(cat))
 
         # 크롤링할 자료 로딩되었는지 확인
         try:
@@ -106,9 +109,11 @@ def foreign(browser, category_list):
             publisher = temp[(temp.find('|')+2):(temp.rfind('|')-1)]
             thumb = browser.find_element_by_xpath(
                 '//*[@id="main_contents"]/ul/li[' + str(i) + ']/div[1]/a/img').get_attribute(('src'))
-            # 이미지 없는 책 예외처리
+            # 이미지 없는 책들 예외처리
             if thumb =="http://image.kyobobook.co.kr/newimages/apps/b2c/product/Noimage_l.gif":
-                thumb=''
+                continue
+            elif thumb =="http://image.kyobobook.co.kr/newimages/apps/b2c/product/19adult_m.gif":
+                continue
             sql += '"' + title.replace("'",'').replace('"','') + '"' + "," + '"' + thumb + '"' + "," + price.replace(",",
                                                                                      '') + "," + '"' + author.replace("'",'').replace('"','') + '"' + "," + '"' + publisher.replace("'",'').replace('"','') + '"' + "," + '"' + cat1 + '"' + "," + '"' + cat2 + '"' + "," + '"' + cat3 + '"' + '),'
 
@@ -138,16 +143,18 @@ browser = webdriver.Chrome(path)
 addr = 'http://www.kyobobook.co.kr/categoryRenewal/categoryMain.laf?pageNumber=1&perPage=300&mallGb=KOR&linkClass='
 
 # 국내도서 크롤링 시작
-domestic(browser, category_list)
+# domestic(browser, category_list)
 
 # 국내도서 끝, 해외도서 시작
 
 # 해외도서 카테고리
-category_list = list(range(1, 16, 2))
-category_list.extend(list(range(43, 64, 2)))
+# category_list = list(range(1, 16, 2))
+# category_list.extend(list(range(43, 64, 2)))
+category_list = list(range(43, 64, 2))
 
-# 해외도서 주소
-addr = 'http://www.kyobobook.co.kr/bestSellerNew/bestseller.laf?mallGb=ENG&range=0&kind=0&orderClick=DBf&perPage=300&linkClass='
+# 해외도서 주소, mallGb 값에 따라 어느나라 도서를 고를지 선택이 된다.
+addr = 'http://www.kyobobook.co.kr/bestSellerNew/bestseller.laf?mallGb='
+addr1 = '&range=0&kind=0&orderClick=DBf&perPage=300&linkClass='
 
 # 해외도서 크롤링 시작
 foreign(browser, category_list)

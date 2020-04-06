@@ -820,9 +820,10 @@ li.sale-noti > a {
 .header-cart {
   position: absolute;
   z-index: 1100;
-  width: 250px;
+  width: 230px;
   top: 190%;
   right: -10px;
+  background-color: white;
   /* padding: 20px; */
 
   transition: all 0.3s;
@@ -851,7 +852,7 @@ li.sale-noti > a {
 }
 
 .header-cart-wrapitem {
-  max-height: 270px;
+  max-height: 230px;
   overflow: auto;
 }
 
@@ -863,8 +864,8 @@ li.sale-noti > a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  /* padding-bottom: 5px;
+  padding-top: 5px; */
 }
 
 /* ------------------------------------ */
