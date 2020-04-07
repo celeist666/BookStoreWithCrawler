@@ -87,7 +87,7 @@
 
     var menu = $('.js-show-header-dropdown1');
     var sub_menu_is_showed = -1;
- 
+
     for(var i=0; i<menu.length; i++){
         $(menu[i]).on('click', function(){
 
@@ -105,7 +105,7 @@
                 }
         });
     }
-
+ 
     $(".js-show-header-dropdown1, .header-dropdown1").click(function(event){
         event.stopPropagation();
     });
