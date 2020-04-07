@@ -105,7 +105,7 @@
                 }
         });
     }
- 
+  
     $(".js-show-header-dropdown1, .header-dropdown1").click(function(event){
         event.stopPropagation();
     });
