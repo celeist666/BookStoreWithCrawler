@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2287185-8bc8-47af-9d8a-f2f85708b75e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../BookStore/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../BookStore/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookStore/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../BookStore/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookCrawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookCrawler.py" afterDir="false" />
     </list>
@@ -31,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.bookCrawler">
     <configuration name="bookCrawler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -109,26 +109,26 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1830" height="198" key="GridCell.Tab.0.bottom" timestamp="1586148335648">
+    <state width="902" height="198" key="GridCell.Tab.0.bottom" timestamp="1586431703703">
       <screen x="0" y="0" width="1851" height="1080" />
     </state>
-    <state width="1830" height="198" key="GridCell.Tab.0.bottom/0.0.1851.1080@0.0.1851.1080" timestamp="1586148335648" />
-    <state width="1830" height="198" key="GridCell.Tab.0.center" timestamp="1586148335648">
+    <state width="902" height="198" key="GridCell.Tab.0.bottom/0.0.1851.1080@0.0.1851.1080" timestamp="1586431703703" />
+    <state width="902" height="198" key="GridCell.Tab.0.center" timestamp="1586431703703">
       <screen x="0" y="0" width="1851" height="1080" />
     </state>
-    <state width="1830" height="198" key="GridCell.Tab.0.center/0.0.1851.1080@0.0.1851.1080" timestamp="1586148335648" />
-    <state width="1830" height="198" key="GridCell.Tab.0.left" timestamp="1586148335648">
+    <state width="902" height="198" key="GridCell.Tab.0.center/0.0.1851.1080@0.0.1851.1080" timestamp="1586431703703" />
+    <state width="902" height="198" key="GridCell.Tab.0.left" timestamp="1586431703703">
       <screen x="0" y="0" width="1851" height="1080" />
     </state>
-    <state width="1830" height="198" key="GridCell.Tab.0.left/0.0.1851.1080@0.0.1851.1080" timestamp="1586148335648" />
-    <state width="1830" height="198" key="GridCell.Tab.0.right" timestamp="1586148335648">
+    <state width="902" height="198" key="GridCell.Tab.0.left/0.0.1851.1080@0.0.1851.1080" timestamp="1586431703703" />
+    <state width="902" height="198" key="GridCell.Tab.0.right" timestamp="1586431703703">
       <screen x="0" y="0" width="1851" height="1080" />
     </state>
-    <state width="1830" height="198" key="GridCell.Tab.0.right/0.0.1851.1080@0.0.1851.1080" timestamp="1586148335648" />
-    <state x="853" y="322" key="SettingsEditor" timestamp="1586132662774">
+    <state width="902" height="198" key="GridCell.Tab.0.right/0.0.1851.1080@0.0.1851.1080" timestamp="1586431703703" />
+    <state x="853" y="322" key="SettingsEditor" timestamp="1586416588915">
       <screen x="0" y="0" width="1851" height="1080" />
     </state>
-    <state x="853" y="322" key="SettingsEditor/0.0.1851.1080@0.0.1851.1080" timestamp="1586132662774" />
+    <state x="853" y="322" key="SettingsEditor/0.0.1851.1080@0.0.1851.1080" timestamp="1586416588915" />
     <state x="629" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1585791615886">
       <screen x="0" y="0" width="1851" height="1080" />
     </state>

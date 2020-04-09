@@ -1,11 +1,42 @@
-selenium 설치 (크롤링 라이브러리로 selenium을 고른 이유는 beautiful soup이 더 빠르긴한데 크롤링하는 장면이 보이지를 않는다. 그래서 시각적 효과를 위해 selenium을 사용한다.)
+파이썬을 이용한 교보문고 크롤러 제작
 
-chromedriver 다운
-ㄴ> https://chromedriver.chromium.org/downloads 에서 버전에 맞게 다운로드. 크롬버전 체크는 크롬메뉴 -> 도움말 -> Chrome 정보
+1. 파이썬 설치
 
-pymysql 다운
+2. pycharm 설치(https://www.jetbrains.com/pycharm/)
 
-mysql 연동
+3. pycharm에서 새 프로젝트 만들기
+
+4. Pycharm으로 파이썬 라이브러리들인 selenium, pymysql, cryptography 설치하기 (https://tariat.tistory.com/692)
+
+5. chromedriver 다운
+ㄴ> https://chromedriver.chromium.org/downloads 에서 자신이 설치한 크롬버전에 맞게 window용 chromedriver 다운로드하기. 크롬버전 체크는 크롬메뉴 -> 도움말 -> Chrome 정보.
+ex) 크롬버전이 80.0.3987.163일 경우 이에 맞게 ChromeDriver도 80.0.3987.163를 win32.zip을 받은뒤 압축을 풀고 파이썬 프로젝트가 있는 폴더에 놓는다.(.py 파일과 같은 위치)
+
+6. mysql 설치 및 기본 스키마 준비
+mysql을 설치한 뒤 workbench를 이용해서
+------------------------------------------
+create database bookstore;
+use database bookstore;
+
+CREATE TABLE `book` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `title` text,
+  `thumb` text,
+  `price` int(11) DEFAULT NULL,
+  `author` text,
+  `cat1` text,
+  `cat2` text,
+  `cat3` text,
+  `publisher` text,
+  PRIMARY KEY (`no`)
+);
+------------------------------------------
+를 실행시키고 성공적으로 실행되었는지 확인.
+
+7. mysql과 파이썬 연결
+설치된 mysql과 파이썬 코드를 연결. 
+
+코드의 130번째줄의 password를 본인 mysql 비밀번호로 바꾸고 
 
 교보 크롤링 => DB에 저장
 

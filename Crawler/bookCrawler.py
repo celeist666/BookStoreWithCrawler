@@ -26,14 +26,14 @@ def domestic(browser, category_list):
         # 책이 몇개인지 알아내어 책의 개수만큼 반복
         end = len(browser.find_elements_by_xpath('//*[@id="prd_list_type1"]/li'))
 
-        # sql문 준비
+        # sql문 준비, 제목, 썸네일, 가격, 저자, 출판사, 1차카테고리, 2차카테고리, 3차카테고리
         sql = 'insert into book(title, thumb, price, author, publisher, cat1, cat2, cat3) values '
 
         cat1 = '국내도서'
         cat2 = browser.find_element_by_xpath('//*[@id="container"]/div[1]/div[3]/p/span/a').text
         cat3 = browser.find_element_by_xpath('//*[@id="container"]/div[1]/div[4]/p/span/a').text
 
-        # 스크롤 이동을 위한 어디로 이동할지
+        # 스크롤 이동을 위한 출발점 지정
         scrl = 500
 
         # 제목, 작가, 가격, 출판사, 썸네일 크롤링
@@ -60,7 +60,6 @@ def domestic(browser, category_list):
         print(cat1 + ' > ' + cat2 + ' > ' + cat3 + ' 크롤링 완료')
         cursor.execute(sql[:-1])
         connect.commit()
-
 
 # 해외도서 크롤링용
 def foreign(browser, category_list):
@@ -93,7 +92,7 @@ def foreign(browser, category_list):
         cat2 = temp[:4]
         cat3 = temp[6:(temp.find('(')-1)]
 
-        # 스크롤 이동을 위한 어디로 이동할지
+        # 스크롤 이동을 위한 출발점 지정
         scrl = 800
 
         # 제목, 작가, 가격, 출판사, 썸네일 크롤링
@@ -125,7 +124,6 @@ def foreign(browser, category_list):
         cursor.execute(sql[:-1])
         connect.commit()
 
-
 # pymysql
 connect = pymysql.connect(host='localhost', user='root', password='4885', db='bookstore', charset='utf8')
 cursor = connect.cursor(pymysql.cursors.DictCursor)
@@ -136,6 +134,7 @@ category_list.extend(list(range(1301, 1316, 2)))
 category_list.extend(list(range(1701, 1716, 2)))
 category_list.extend(list(range(1901, 1718, 2)))
 
+# 크롬드라이버 위치설정
 path = "./chromedriver.exe"
 browser = webdriver.Chrome(path)
 
@@ -143,14 +142,13 @@ browser = webdriver.Chrome(path)
 addr = 'http://www.kyobobook.co.kr/categoryRenewal/categoryMain.laf?pageNumber=1&perPage=300&mallGb=KOR&linkClass='
 
 # 국내도서 크롤링 시작
-# domestic(browser, category_list)
+domestic(browser, category_list)
 
 # 국내도서 끝, 해외도서 시작
 
 # 해외도서 카테고리
-# category_list = list(range(1, 16, 2))
-# category_list.extend(list(range(43, 64, 2)))
-category_list = list(range(43, 64, 2))
+category_list = list(range(1, 16, 2))
+category_list.extend(list(range(43, 64, 2)))
 
 # 해외도서 주소, mallGb 값에 따라 어느나라 도서를 고를지 선택이 된다.
 addr = 'http://www.kyobobook.co.kr/bestSellerNew/bestseller.laf?mallGb='

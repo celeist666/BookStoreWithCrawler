@@ -3,23 +3,25 @@
   <head>
     <link href="css/login.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
-    <title></title>
+    <title>로그인</title>
   </head>
   <body>
     <div class="login-page">
   <div class="form">
-    <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    <form class="register-form" action="login.php">
+      <input type="text" name="id" placeholder="ID"/>
+      <input type="password" name="pwd" placeholder="Password"/>
+      <input type="text" name="email" placeholder="Email"/>
+      <input type="text" name="address" placeholder="주소"/>
+      <input type="text" name="number" placeholder="핸드폰번호"/>
+      <button type="submit">계정 만들기</button>
+      <p class="message">이미 계정이 있으신가요? <a href="#">로그인 하기</a></p>
     </form>
-    <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-      <button>login</button>
-      <p class="message">Not registered? <a href="#">Create an account</a></p>
+    <form class="login-form" action="login.php">
+      <input type="text" name="id" placeholder="ID"/>
+      <input type="password" name="pwd" placeholder="Password"/>
+      <button type="submit">login</button>
+      <p class="message">아직 계정이 없으신가요? <a href="#">계정 만들기</a></p>
     </form>
   </div>
 </div>
