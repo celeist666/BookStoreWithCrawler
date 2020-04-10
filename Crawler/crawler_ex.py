@@ -10,7 +10,7 @@ import pymysql
 conn = pymysql.connect(host='localhost', user='root', password='1111', db='moatoon', charset='utf8',autocommit=True)
 curs = conn.cursor()
 did = 'cookib'
-dpwd = 'Raqzc!@ZDuy322'
+dpwd = 'Raqzc!@ZDuy322 '
 
 option = webdriver.ChromeOptions()
 option.add_argument("--incognito")
